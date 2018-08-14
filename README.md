@@ -6,6 +6,7 @@ Tips:
   - You can find documentation on the api at http://www.omdbapi.com/#usage
   - Information on MiniTest can be found at https://github.com/seattlerb/minitest
   - Use byebug to pause/debug test execution
+  - Follow the same pattern on all api requests (e.g. `request('GET', '?s=star', {}, 'http://www.omdbapi.com/')`)
 
 1) Fetch a personal api key for omdbapi.com to implement on all of your api requests
 
