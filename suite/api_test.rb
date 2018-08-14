@@ -9,6 +9,6 @@ class ApiTest < Minitest::Test
     request('GET', '?s=star', {}, 'http://www.omdbapi.com/')
     puts last_response.obj
 
-    # todo: Task1 - add the assertion
+    # TODO: Task 2 - add the assertion
   end
 end
