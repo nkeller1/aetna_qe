@@ -2,12 +2,13 @@
 
 It is time to run some tests against OMDb API - The Open Movie Database!
 
-Tips:
+## Tips:
   - You can find documentation on the api at http://www.omdbapi.com/#usage
   - Information on MiniTest can be found at https://github.com/seattlerb/minitest
   - Use byebug to pause/debug test execution
   - Follow the same pattern on all api requests (e.g. `request('GET', '?s=star', {}, 'http://www.omdbapi.com/')`)
 
+## Tasks:
 1) Fetch a personal api key for omdbapi.com to implement on all of your api requests
 
 2) Add an assertion to suite/test_no_api_key to ensure the response at runtime matches what is currently displayed with the api key missing  
