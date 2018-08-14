@@ -1,4 +1,4 @@
-# qa_api_code_test
+# QA API Code Test
 
 It is time to run some tests against OMDb API - The Open Movie Database!
 
