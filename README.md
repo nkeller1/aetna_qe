@@ -18,13 +18,14 @@ Tips:
     - Verify values are all string
     - Verify year matches correct format
 
-4) Add a test that verifies each imdbID on page 1 is valid (e.g. not orphaned)
+4) Add a test that uses the i parameter to verify each title on page 1 is accessible via imdbID
 
 5) Add a test that verifies none of the poster links on page 1 are broken
  
 6) Add a test that verifies there are no duplicate records across the first 5 pages
 
-7) Have a paging test which verifies the lower boundary and upper boundary of page numbers 
-     and that the number of records on the last page matches the number that should exist on the last page
+7) Have a paging test which verifies the lower boundary and upper boundary of page numbers are accessible based on totalResults count
+
+8) Extend the test in item 7 to ensure the number of records on the last page matches the number that should exist on the last page
   
-8) Take any of the logic established in your work and add improvements (e.g. DRY Principle, reusability, or other refactoring)
+9) Take any of the logic established in your work and add improvements (e.g. DRY Principle, reusability, or other valuable refactoring)
