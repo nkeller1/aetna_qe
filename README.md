@@ -7,6 +7,8 @@ It is time to run some tests against OMDb API - The Open Movie Database!
 - You can find the main api page at http://www.omdbapi.com
 - You must use minitest and rest-client as supplied, and follow the existing pattern of api requests in test_no_api_key.
 - You may add or change other gems as you see the need. (For example, byebug is supplied debugging but you may use another debugger.)
+- Completed repo should allow for easy setup/running of your test file.
+- Unique or helpful information should be documented in the readme.
 
 ## Tasks:
 
@@ -16,18 +18,15 @@ It is time to run some tests against OMDb API - The Open Movie Database!
 
 3. Extend api_test.rb by creating a test that performs a search on 'thomas'.
 
-4. - Verify all titles are a relevant match
-   - Verify keys include Title, Year, imdbID, Type, and Poster for all records in the response
-   - Verify values are all of the correct object class
-   - Verify year matches correct format
+  - Verify all titles are a relevant match
+  - Verify keys include Title, Year, imdbID, Type, and Poster for all records in the response
+  - Verify values are all of the correct object class
+  - Verify year matches correct format
 
-5. Add a test that uses the i parameter to verify each title on page 1 is accessible via imdbID
+4. Add a test that uses the i parameter to verify each title on page 1 is accessible via imdbID
 
-6. Add a test that verifies none of the poster links on page 1 are broken
+5. Add a test that verifies none of the poster links on page 1 are broken
 
-7. Add a test that verifies there are no duplicate records across the first 5 pages
+6. Add a test that verifies there are no duplicate records across the first 5 pages
 
-## Stretch Goal (optional):
-
-- Add a test that verifies something you are curious about with regard to movies or data in the database.
-
+7. Add a test that verifies something you are curious about with regard to movies or data in the database.
