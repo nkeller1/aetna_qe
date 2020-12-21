@@ -82,4 +82,25 @@ module RequestHelper
     # Returns the response of the last request
     last_request.response
   end
+
+  def curl(request_offset = 0)
+    # Use request_offset = 1 for next request, 0 for last request, -1 for request prior
+    attrs = if request_offset == 1
+              next_request.attrs
+            else
+              # get array of attributes, eliminating duplicate requests, like within search
+              collection = []
+              requests.each { |request| collection << request.attrs }
+              collection.uniq[(collection.uniq.size - 1) + request_offset]
+            end
+
+    headers = ''
+    payload = ''
+
+    attrs[:headers].each do |k, v|
+      headers << "-H '#{k}: #{v}' " unless k == :params
+    end
+    payload = "-d $'#{attrs[:payload]}'" if attrs.key? :payload
+    "\nSee: curl -X \"#{attrs[:method].to_s.upcase}\" \"#{attrs[:url]}\" #{headers} #{payload}\n"
+  end
 end
