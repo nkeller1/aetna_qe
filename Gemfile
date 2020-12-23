@@ -4,5 +4,5 @@ group :test do
   gem 'pry-byebug'
   gem 'minitest'
   gem 'minitest-reporters'
-  gem 'rest-client'
+  gem 'faraday'
 end
