@@ -5,7 +5,7 @@ It is time to run some tests against OMDb API - The Open Movie Database!
 ## Tips:
 
 - You can find the main api page at http://www.omdbapi.com
-- You must use minitest and rest-client as supplied, and follow the existing pattern of api requests in test_no_api_key.
+- You must use minitest and faraday as supplied, and follow the existing pattern of api requests in test_no_api_key.
 - You may add or change other gems as you see the need. (For example, 'pry' is supplied debugging but you may use another debugger.)
 - Completed repo should allow for easy setup/running of your test file.
 - Unique or helpful information should be documented in the readme.
