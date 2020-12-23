@@ -4,6 +4,7 @@ Encoding.default_internal = Encoding::UTF_8
 require 'faraday'
 require 'minitest/autorun'
 require 'minitest/reporters'
+require 'pry'
 
 def test_client
   @test_client ||= Faraday.new do |f|

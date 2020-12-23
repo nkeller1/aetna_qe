@@ -8,6 +8,6 @@ class ApiTest < Minitest::Test
     make_request('?s=star', 'http://www.omdbapi.com/')
     puts last_response.body
 
-    # TODO: Task 2 - add the assertion
+    # TODO: Add the assertion described in readme
   end
 end
