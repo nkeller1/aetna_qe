@@ -3,7 +3,6 @@ GEM
   specs:
     ansi (1.5.0)
     builder (3.2.4)
-    byebug (11.1.3)
     coderay (1.1.3)
     faraday (1.2.0)
       multipart-post (>= 1.2, < 3)
@@ -19,9 +18,6 @@ GEM
     pry (0.13.1)
       coderay (~> 1.1)
       method_source (~> 1.0)
-    pry-byebug (3.9.0)
-      byebug (~> 11.0)
-      pry (~> 0.13.0)
     ruby-progressbar (1.10.1)
     ruby2_keywords (0.0.2)
 
@@ -32,7 +28,7 @@ DEPENDENCIES
   faraday
   minitest
   minitest-reporters
-  pry-byebug
+  pry
 
 BUNDLED WITH
    1.17.3
