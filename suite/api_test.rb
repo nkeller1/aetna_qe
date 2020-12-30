@@ -3,12 +3,11 @@ require File.expand_path('../support/test_helper', __dir__)
 require 'minitest/autorun'
 
 class ApiTest < Minitest::Test
-  include RequestHelper
 
   def test_no_api_key
-    request('GET', '?s=star', {}, 'http://www.omdbapi.com/')
-    puts last_response.obj
+    make_request('?s=star', 'http://www.omdbapi.com/')
+    puts last_response.body
 
-    # TODO: Task 2 - add the assertion
+    # TODO: Add the assertion described in readme
   end
 end

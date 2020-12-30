@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
 group :test do
-  gem 'byebug'
+  gem 'pry'
   gem 'minitest'
-  gem 'rest-client'
+  gem 'minitest-reporters'
+  gem 'faraday'
 end
