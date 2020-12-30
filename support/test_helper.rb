@@ -6,6 +6,7 @@ require 'json'
 require 'minitest/autorun'
 require 'minitest/reporters'
 require 'pry'
+require 'dotenv/load'
 
 def test_client
   @test_client ||= Faraday.new do |f|
