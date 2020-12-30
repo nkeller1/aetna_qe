@@ -30,3 +30,8 @@ It is time to run some tests against OMDb API - The Open Movie Database!
 6. Add a test that verifies there are no duplicate records across the first 5 pages
 
 7. Add a test that verifies something you are curious about with regard to movies or data in the database.
+
+
+Notes
+
+dotenv has been added to the gem list. Create a .env file in the root directory. Docs for dot.env. (Docs-https://github.com/bkeepers/dotenv)
