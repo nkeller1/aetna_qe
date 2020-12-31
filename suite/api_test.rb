@@ -47,6 +47,7 @@ class ApiTest < Minitest::Test
   end
 
   def test_i_parameter_is_accessable_by_imbdID
+    skip
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=1", 'http://www.omdbapi.com/')
     parse_last_response_body = JSON.parse(last_response.body)
     search_results =  parse_last_response_body['Search']
@@ -66,6 +67,32 @@ class ApiTest < Minitest::Test
       # verifies leading t's, that convert to a 0, are not equal
       refute_match verify_id[0].to_i.to_s, verify_id[0]
       refute_match verify_id[1].to_i.to_s, verify_id[1]
+    end
+  end
+
+  def test_poster_link_validity_page_1
+    skip
+    make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=1", 'http://www.omdbapi.com/')
+    parse_last_response_body = JSON.parse(last_response.body)
+    search_results =  parse_last_response_body['Search']
+
+    search_results.each do |result|
+      assert_instance_of (URI::HTTPS || URI::HTTP), URI.parse(result['Poster'])
+    end
+  end
+
+  def test_invalid_poster_links_are_okay_on_page_3
+    skip
+    make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=3", 'http://www.omdbapi.com/')
+    parse_last_response_body = JSON.parse(last_response.body)
+    search_results =  parse_last_response_body['Search']
+
+    search_results.each do |result|
+      if !URI.parse(result['Poster']).is_a?(URI::HTTPS)
+        assert_equal result['Poster'], "N/A"
+      else
+        assert_instance_of (URI::HTTPS || URI::HTTP), URI.parse(result['Poster'])
+      end
     end
 
   end
