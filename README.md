@@ -14,6 +14,7 @@
 ```
    - The .env file has already been added to .gitignore
 
+4. 'Master' branch has been renamed to 'main'.
 
 To meet the following criteria `You must use minitest and faraday as supplied, and follow the existing pattern of api requests in test_no_api_key.` I have added a puts in each test BUT I have commented out the line. If you choose to run each test individually please comment back in the 'puts' line in to see the response in the terminal. 
  
@@ -25,6 +26,7 @@ To meet the following criteria `You must use minitest and faraday as supplied, a
 1. I (mostly) stuck to testing the 'By Search (s)' parameter for edge case and additional testing since most of the acceptance criteria revolved around the 's' parameter.
 2. While it seems like performance testing outside of the acceptance criteria, it would be a good idea. 
 3. I chose not to use VCR at this time as I wanted to test calls in action and didn't think I would even come close to the 1000 per day limit. VCR is usually a gem I make part of my standard library. 
+4. I followed a typical git workflow with commit and branch histopry rather than commiting to main.
 
 
 # QA API Code Test
