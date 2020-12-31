@@ -94,6 +94,25 @@ class ApiTest < Minitest::Test
         assert_instance_of (URI::HTTPS || URI::HTTP), URI.parse(result['Poster'])
       end
     end
+  end
 
+  def test_no_duplicate_records_across_first_5_pages
+      all_results = Array.new
+      acc = 1
+      until acc == 6
+        make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=#{acc}", 'http://www.omdbapi.com/')
+        parse_page = JSON.parse(last_response.body)
+        search_results = parse_page['Search']
+        all_results << search_results
+        acc += 1
+      end
+      
+      all_results.flatten!
+      imbdIDs = all_results.map do |result|
+        result["imdbID"]
+      end
+
+      assert_equal imbdIDs.length, 50
+      assert_equal imbdIDs.length, imbdIDs.uniq.length
   end
 end
