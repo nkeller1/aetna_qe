@@ -6,7 +6,7 @@ class ApiTest < Minitest::Test
 
   def test_no_api_key
     make_request('?s=star', 'http://www.omdbapi.com/')
-    puts last_response.body
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
 
     # expect response to be JSON formatted
@@ -22,6 +22,7 @@ class ApiTest < Minitest::Test
 
   def test_successful_response_for_search_of_thomas
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
     search_results =  parse_last_response_body['Search']
 
@@ -47,6 +48,7 @@ class ApiTest < Minitest::Test
 
   def test_using_i_param_page_1_is_accessable_on_imbd
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
     search_results =  parse_last_response_body['Search']
 
@@ -60,6 +62,7 @@ class ApiTest < Minitest::Test
 
   def test_poster_link_validity_page_1
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=1", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
     search_results =  parse_last_response_body['Search']
 
@@ -71,6 +74,7 @@ class ApiTest < Minitest::Test
   def test_invalid_poster_links_are_okay_on_page_3
     # additonal edge case for invalid poster links
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=3", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
     search_results =  parse_last_response_body['Search']
 
@@ -94,7 +98,8 @@ class ApiTest < Minitest::Test
         acc += 1
       end
       all_results.flatten!
-
+      # I felt like using the puts for all_results was more beneficial then 5 last_responses
+      # puts all_results
       imbdIDs = all_results.map do |result|
         result["imdbID"]
       end
@@ -106,6 +111,7 @@ class ApiTest < Minitest::Test
 # additional testing I am curious about
   def test_imbdID_is_uniform_for_all_responses_page_1
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=1", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
     search_results =  parse_last_response_body['Search']
     search_results.each do |result|
@@ -129,6 +135,7 @@ class ApiTest < Minitest::Test
 
   def test_passing_no_query_params_throws_error
     make_request("?apikey=#{ENV['OMDB_API_KEY']}", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
 
     assert_equal parse_last_response_body.key?('Response'), true
@@ -140,6 +147,7 @@ class ApiTest < Minitest::Test
     # This is sending a 200 response. I would probably ask that a differnt code be
     # sent instead of 200 for an error
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
 
     assert_equal parse_last_response_body.key?('Response'), true
@@ -149,6 +157,7 @@ class ApiTest < Minitest::Test
 
   def test_total_results_key_exists_on_succcessful_response
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
 
     assert_equal parse_last_response_body.key?('totalResults'), true
@@ -158,6 +167,7 @@ class ApiTest < Minitest::Test
     # This is sending a 200 response. I would probably ask that a differnt code be
     # sent instead of 200 for an error
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=#{12.34}", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
 
     assert_equal parse_last_response_body.key?('Response'), true
@@ -169,6 +179,7 @@ class ApiTest < Minitest::Test
     # This is sending a 200 response. I would probably ask that a differnt code be
     # sent instead of 200 for an error
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=#{0.34}", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
 
     assert_equal parse_last_response_body.key?('Response'), true
@@ -180,6 +191,7 @@ class ApiTest < Minitest::Test
     # This is sending a 200 response. I would probably ask that a differnt code be
     # sent instead of 200 for an error
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=", 'http://www.omdbapi.com/')
+    # puts last_response.body
     parse_last_response_body = JSON.parse(last_response.body)
 
     assert_equal parse_last_response_body.key?('Response'), true
@@ -192,6 +204,7 @@ class ApiTest < Minitest::Test
     # or how they should look. I am really testing what is currently there to show
     # what i would test or ask about
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas", 'http://www.omdbapi.com/')
+    # puts last_response.body
 
     assert_equal last_response.headers['content-type'], 'application/json; charset=utf-8'
     assert_equal last_response.headers['connection'], 'keep-alive'
