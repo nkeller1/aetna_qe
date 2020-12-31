@@ -137,6 +137,8 @@ class ApiTest < Minitest::Test
   end
 
   def test_no_search_params_passed_throws_error
+    # This is sending a 200 response. I would probably ask that a differnt code be
+    # sent instead of 200 for an error
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=", 'http://www.omdbapi.com/')
     parse_last_response_body = JSON.parse(last_response.body)
 
@@ -172,17 +174,6 @@ class ApiTest < Minitest::Test
     assert_equal parse_last_response_body.key?('Response'), true
     assert_equal parse_last_response_body.key?('Error'), true
     assert_equal parse_last_response_body['Error'], 'The offset specified in a OFFSET clause may not be negative.'
-  end
-
-  def test_passing_an_invalid_character_in_search_throws_error
-    # This is sending a 200 response. I would probably ask that a differnt code be
-    # sent instead of 200 for an error
-    make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=%&page=1", 'http://www.omdbapi.com/')
-    parse_last_response_body = JSON.parse(last_response.body)
-
-    assert_equal parse_last_response_body.key?('Response'), true
-    assert_equal parse_last_response_body.key?('Error'), true
-    assert_equal parse_last_response_body['Error'], 'Too many results.'
   end
 
   def test_passing_an_empty_search_throws_error
