@@ -21,6 +21,7 @@ class ApiTest < Minitest::Test
   end
 
   def test_successful_response_for_thomas
+    skip
     make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas", 'http://www.omdbapi.com/')
     parse_last_response_body = JSON.parse(last_response.body)
     search_results =  parse_last_response_body['Search']
@@ -42,8 +43,29 @@ class ApiTest < Minitest::Test
       assert_instance_of Hash, result
       # Expect 'Year' Key to be formatted correctly
       assert_equal Date.new(result['Year'].to_i).gregorian?, true
-      #expect poster to be a URL
-      assert_includes result['Poster'], 'http'
+    end
+  end
+
+  def test_i_parameter_is_accessable_by_imbdID
+    make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=thomas&page=1", 'http://www.omdbapi.com/')
+    parse_last_response_body = JSON.parse(last_response.body)
+    search_results =  parse_last_response_body['Search']
+    search_results.each do |result|
+      verify_id = result['imdbID'].split(//)
+      assert_equal verify_id.length, 9
+      assert_equal verify_id[0], 't'
+      assert_equal verify_id[1], 't'
+      # verifies that the trailing int's are actual int's
+      assert_equal verify_id[2].to_i.to_s, verify_id[2]
+      assert_equal verify_id[3].to_i.to_s, verify_id[3]
+      assert_equal verify_id[4].to_i.to_s, verify_id[4]
+      assert_equal verify_id[5].to_i.to_s, verify_id[5]
+      assert_equal verify_id[6].to_i.to_s, verify_id[6]
+      assert_equal verify_id[7].to_i.to_s, verify_id[7]
+      assert_equal verify_id[8].to_i.to_s, verify_id[8]
+      # verifies leading t's, that convert to a 0, are not equal
+      refute_match verify_id[0].to_i.to_s, verify_id[0]
+      refute_match verify_id[1].to_i.to_s, verify_id[1]
     end
 
   end
