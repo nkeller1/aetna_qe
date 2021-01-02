@@ -42,6 +42,9 @@ class ApiTest < Minitest::Test
       assert_equal result.key?('Poster'), true
       assert_instance_of Hash, result
       # Expect 'Year' Key to be formatted correctly
+      # This method will allow the '1984-' to pass since the date comes after the
+      # "-" but if the "-" (example: -1985) comes before the year this test will fail since that is making
+      # the year a negative value instead of a type-o
       assert_equal Date.new(result['Year'].to_i).gregorian?, true
     end
   end
@@ -153,6 +156,40 @@ class ApiTest < Minitest::Test
     assert_equal parse_last_response_body.key?('Response'), true
     assert_equal parse_last_response_body.key?('Error'), true
     assert_equal parse_last_response_body['Error'], 'Incorrect IMDb ID.'
+  end
+
+  def test_pass_in_nil_to_search_throws_error
+    # This is sending a 200 response. I would probably ask that a differnt code be
+    # sent instead of 200 for an error
+    make_request("?apikey=#{ENV['OMDB_API_KEY']}&s=#{nil}", 'http://www.omdbapi.com/')
+    # puts last_response.body
+    parse_last_response_body = JSON.parse(last_response.body)
+
+    assert_equal parse_last_response_body.key?('Response'), true
+    assert_equal parse_last_response_body.key?('Error'), true
+    assert_equal parse_last_response_body['Error'], 'Incorrect IMDb ID.'
+  end
+
+  def test_incorrect_api_key
+    make_request('?apikey=WRONG_API_KEY&?s=star', 'http://www.omdbapi.com/')
+    # puts last_response.body
+    parse_last_response_body = JSON.parse(last_response.body)
+
+    assert_equal parse_last_response_body.key?('Response'), true
+    assert_equal parse_last_response_body['Response'], 'False'
+    assert_equal parse_last_response_body.key?('Error'), true
+    assert_equal parse_last_response_body['Error'], 'Invalid API key!'
+  end
+
+  def test_nil_passed_as_api_key
+    make_request("?apikey=#{nil}&?s=star", 'http://www.omdbapi.com/')
+    # puts last_response.body
+    parse_last_response_body = JSON.parse(last_response.body)
+
+    assert_equal parse_last_response_body.key?('Response'), true
+    assert_equal parse_last_response_body['Response'], 'False'
+    assert_equal parse_last_response_body.key?('Error'), true
+    assert_equal parse_last_response_body['Error'], 'No API key provided.'
   end
 
   def test_total_results_key_exists_on_succcessful_response
