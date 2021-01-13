@@ -6,4 +6,6 @@ group :test do
   gem 'minitest-reporters'
   gem 'faraday'
   gem 'dotenv'
+  gem 'minitest-vcr'
+  gem 'webmock'
 end

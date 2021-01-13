@@ -7,6 +7,13 @@ require 'minitest/autorun'
 require 'minitest/reporters'
 require 'pry'
 require 'dotenv/load'
+require 'vcr'
+require 'webmock'
+
+VCR.configure do |c|
+  c.cassette_library_dir = "suite/vcr"
+  c.hook_into :webmock
+end
 
 def test_client
   @test_client ||= Faraday.new do |f|
