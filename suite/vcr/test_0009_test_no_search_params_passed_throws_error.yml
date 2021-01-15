@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&s=
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d741e0cbeba5da3fab441427f5608f8da1610735315; expires=Sun, 14-Feb-21
+        18:28:35 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:06 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:06 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '29'
+      Cf-Request-Id:
+      - 07a8e7833e0000c7a517be0000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a84b990bc7a5-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Response":"False","Error":"Incorrect IMDb ID."}'
+  recorded_at: Fri, 15 Jan 2021 18:28:35 GMT
+recorded_with: VCR 6.0.0

@@ -1,0 +1,664 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&s=thomas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d3f3c942479d449bc90bc0b49f154d5fe1610735288; expires=Sun, 14-Feb-21
+        18:28:08 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Wed, 13 Jan 2021 23:51:43 GMT
+      Last-Modified:
+      - Wed, 13 Jan 2021 22:51:43 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - HIT
+      Age:
+      - '156985'
+      Cf-Request-Id:
+      - 07a8e7197e0000c7c18c28a000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a2680bc7c1-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJTZWFyY2giOlt7IlRpdGxlIjoiVGhlIFRob21hcyBDcm93biBBZmZhaXIiLCJZZWFyIjoiMTk5OSIsImltZGJJRCI6InR0MDE1NTI2NyIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJNbVUwTjJSaU5UQXROMlU0TVMwME1XRXhMVGt6TkdZdE9UVmhObVZtWm1ObE9UVXpYa0V5WGtGcWNHZGVRWFZ5TkRrM056VTJNVFFALl9WMV9TWDMwMC5qcGcifSx7IlRpdGxlIjoiT2RkIFRob21hcyIsIlllYXIiOiIyMDEzIiwiaW1kYklEIjoidHQxNzY3MzU0IiwiVHlwZSI6Im1vdmllIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk1qSTFNREUyTmpJMU9WNUJNbDVCYW5CblhrRnRaVGd3TXpFeU1UTXhNVEVALl9WMV9TWDMwMC5qcGcifSx7IlRpdGxlIjoiVGhlIFRob21hcyBDcm93biBBZmZhaXIiLCJZZWFyIjoiMTk2OCIsImltZGJJRCI6InR0MDA2MzY4OCIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJPVEE1TnpRNE5qRTRORjVCTWw1QmFuQm5Ya0Z0WlRjd01qSXpNelkzTkFAQC5fVjFfU1gzMDAuanBnIn0seyJUaXRsZSI6IlRob21hcyBhbmQgdGhlIE1hZ2ljIFJhaWxyb2FkIiwiWWVhciI6IjIwMDAiLCJpbWRiSUQiOiJ0dDAyMDU0NjEiLCJUeXBlIjoibW92aWUiLCJQb3N0ZXIiOiJodHRwczovL20ubWVkaWEtYW1hem9uLmNvbS9pbWFnZXMvTS9NVjVCWWpNeFlUYzFPV1F0TldObFlTMDBZV0kwTFRsbU9HWXRZVEEyTnpFeE1EY3dNVGs1WGtFeVhrRnFjR2RlUVhWeU5UVXlNekU0TXpnQC5fVjFfU1gzMDAuanBnIn0seyJUaXRsZSI6IlRob21hcyB0aGUgVGFuayBFbmdpbmUgJiBGcmllbmRzIiwiWWVhciI6IjE5ODTigJMiLCJpbWRiSUQiOiJ0dDAwODY4MTUiLCJUeXBlIjoic2VyaWVzIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qll6UmxNak0zT0dFdFltVmlaUzAwWldFM0xUZzJNVEV0TUROak16WmpZVFF5TmpNelhrRXlYa0ZxY0dkZVFYVnlNak15T1RreU1EWUAuX1YxX1NYMzAwLmpwZyJ9LHsiVGl0bGUiOiJUaG9tYXMgS2lua2FkZSdzIENocmlzdG1hcyBDb3R0YWdlIiwiWWVhciI6IjIwMDgiLCJpbWRiSUQiOiJ0dDA5OTk4NzIiLCJUeXBlIjoibW92aWUiLCJQb3N0ZXIiOiJodHRwczovL20ubWVkaWEtYW1hem9uLmNvbS9pbWFnZXMvTS9NVjVCTlRrME5qVTVOakUyTlY1Qk1sNUJhbkJuWGtGdFpUY3dOVFkxT0RJd01nQEAuX1YxX1NYMzAwLmpwZyJ9LHsiVGl0bGUiOiJUaG9tYXMgaW4gTG92ZSIsIlllYXIiOiIyMDAwIiwiaW1kYklEIjoidHQwMjYyODI2IiwiVHlwZSI6Im1vdmllIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk1UTXdPREUxTkRRM09WNUJNbDVCYW5CblhrRnRaVFl3TnpRd01UZzUuX1YxX1NYMzAwLmpwZyJ9LHsiVGl0bGUiOiJTdWUgVGhvbWFzOiBGLkIuRXllIiwiWWVhciI6IjIwMDLigJMyMDA1IiwiaW1kYklEIjoidHQwMzI5OTM0IiwiVHlwZSI6InNlcmllcyIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJNVFF6TURRNU1UazJOMTVCTWw1QmFuQm5Ya0Z0WlRjd01qZzBNREl5TlFAQC5fVjFfU1gzMDAuanBnIn0seyJUaXRsZSI6IlRvbSAmIFRob21hcyIsIlllYXIiOiIyMDAyIiwiaW1kYklEIjoidHQwMjg4MjYzIiwiVHlwZSI6Im1vdmllIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk1UTTRNakk1TXpnMk5GNUJNbDVCYW5CblhrRnRaVFl3TXpBME1UYzIuX1YxX1NYMzAwLmpwZyJ9LHsiVGl0bGUiOiJTcHJpbmd0aW1lIGZvciBUaG9tYXMiLCJZZWFyIjoiMTk0NiIsImltZGJJRCI6InR0MDAzODk3NyIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJabVV6WWpSaE56Y3ROek0wTVMwME9XWTVMV0ptTWpRdFlqZGtaamhqWmpNMVltVTFYa0V5WGtGcWNHZGVRWFZ5TlRjME5qWTFPRGtALl9WMV9TWDMwMC5qcGcifV0sInRvdGFsUmVzdWx0cyI6IjY5MCIsIlJlc3BvbnNlIjoiVHJ1ZSJ9
+  recorded_at: Fri, 15 Jan 2021 18:28:08 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0155267
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d0a724f5415708682aa5edf8da030adc71610735288; expires=Sun, 14-Feb-21
+        18:28:08 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:08 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:08 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e719c30000f7904b166000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a2de81f790-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"The Thomas Crown Affair","Year":"1999","Rated":"R","Released":"06
+        Aug 1999","Runtime":"113 min","Genre":"Crime, Romance, Thriller","Director":"John
+        McTiernan","Writer":"Alan Trustman (story), Leslie Dixon (screenplay), Kurt
+        Wimmer (screenplay)","Actors":"Pierce Brosnan, Rene Russo, Denis Leary, Ben
+        Gazzara","Plot":"A very rich and successful playboy amuses himself by stealing
+        artwork, but may have met his match in a seductive detective.","Language":"English,
+        German, Polish, French","Country":"USA","Awards":"3 wins & 2 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BMmU0N2RiNTAtN2U4MS00MWExLTkzNGYtOTVhNmVmZmNlOTUzXkEyXkFqcGdeQXVyNDk3NzU2MTQ@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"6.8/10"},{"Source":"Rotten Tomatoes","Value":"70%"},{"Source":"Metacritic","Value":"72/100"}],"Metascore":"72","imdbRating":"6.8","imdbVotes":"86,299","imdbID":"tt0155267","Type":"movie","DVD":"N/A","BoxOffice":"$69,305,181","Production":"United
+        Artists","Website":"N/A","Response":"True"}'
+  recorded_at: Fri, 15 Jan 2021 18:28:08 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt1767354
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:08 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d9a2872b0b67edc0e6c852720339c86df1610735288; expires=Sun, 14-Feb-21
+        18:28:08 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:08 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:08 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71a490000c7b54a8f1000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a3aadec7b5-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Odd Thomas","Year":"2013","Rated":"PG-13","Released":"28
+        Feb 2014","Runtime":"97 min","Genre":"Comedy, Fantasy, Horror, Mystery, Romance,
+        Thriller","Director":"Stephen Sommers","Writer":"Stephen Sommers (screenplay
+        by), Dean R. Koontz (based on the novel \"Odd Thomas\" by)","Actors":"Anton
+        Yelchin, Ashley Sommers, Leonor Varela, Matthew Page","Plot":"In a California
+        desert town, a short-order cook with clairvoyant abilities encounters a mysterious
+        man with a link to dark, threatening forces.","Language":"English","Country":"USA,
+        UK","Awards":"1 win.","Poster":"https://m.media-amazon.com/images/M/MV5BMjI1MDE2NjI1OV5BMl5BanBnXkFtZTgwMzEyMTMxMTE@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"6.8/10"},{"Source":"Rotten Tomatoes","Value":"38%"},{"Source":"Metacritic","Value":"45/100"}],"Metascore":"45","imdbRating":"6.8","imdbVotes":"47,626","imdbID":"tt1767354","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"The
+        Sommers Company","Website":"N/A","Response":"True"}'
+  recorded_at: Fri, 15 Jan 2021 18:28:08 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0063688
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d10a41cce31905ea878d9443893df8c2c1610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71ab400002713621a4000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a45ce02713-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"The Thomas Crown Affair","Year":"1968","Rated":"Approved","Released":"26
+        Jun 1968","Runtime":"102 min","Genre":"Crime, Drama, Romance, Thriller","Director":"Norman
+        Jewison","Writer":"Alan Trustman","Actors":"Steve McQueen, Faye Dunaway, Paul
+        Burke, Jack Weston","Plot":"A debonair, adventuresome bank executive believes
+        he has pulled off the perfect multi-million dollar heist, only to match wits
+        with a sexy insurance investigator who will do anything to get her man.","Language":"English","Country":"USA","Awards":"Won
+        1 Oscar. Another 1 win & 5 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BOTA5NzQ4NjE4NF5BMl5BanBnXkFtZTcwMjIzMzY3NA@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.0/10"},{"Source":"Rotten Tomatoes","Value":"76%"},{"Source":"Metacritic","Value":"66/100"}],"Metascore":"66","imdbRating":"7.0","imdbVotes":"22,666","imdbID":"tt0063688","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"United
+        Artists","Website":"N/A","Response":"True"}'
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0205461
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dcc956defd76f23484cec5ecde5a479761610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71b170000f7800d3f3000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a4fe85f780-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Thomas and the Magic Railroad","Year":"2000","Rated":"G","Released":"26
+        Jul 2000","Runtime":"85 min","Genre":"Adventure, Comedy, Drama, Family, Fantasy","Director":"Britt
+        Allcroft","Writer":"Britt Allcroft, Britt Allcroft (created by), Wilbert Awdry
+        (based on the railway series by), Britt Allcroft (\"Shining Time Station\"
+        created by), Rick Siggelkow (\"Shining Time Station\" created by)","Actors":"Alec
+        Baldwin, Cody McMains, Russell Means, Peter Fonda","Plot":"Thomas the Tank
+        Engine''s feature film debut follows Thomas and Mr. Conductor (Alec Baldwin)
+        as they cross between the real world and the fictional Island of Sodor, in
+        an attempt to recover lost gold dust.","Language":"English","Country":"UK,
+        USA, Isle Of Man, Canada","Awards":"2 nominations.","Poster":"https://m.media-amazon.com/images/M/MV5BYjMxYTc1OWQtNWNlYS00YWI0LTlmOGYtYTA2NzExMDcwMTk5XkEyXkFqcGdeQXVyNTUyMzE4Mzg@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"4.1/10"},{"Source":"Rotten Tomatoes","Value":"21%"},{"Source":"Metacritic","Value":"19/100"}],"Metascore":"19","imdbRating":"4.1","imdbVotes":"3,731","imdbID":"tt0205461","Type":"movie","DVD":"N/A","BoxOffice":"$15,933,506","Production":"Gullane
+        Pictures, Destination Films, Isle of Man Film","Website":"N/A","Response":"True"}'
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0086815
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=df85446701c47b530b7ab56a0a6d6bbe31610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71b850000273a1b142000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a5ab13273a-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IlRob21hcyB0aGUgVGFuayBFbmdpbmUgJiBGcmllbmRzIiwiWWVhciI6IjE5ODTigJMiLCJSYXRlZCI6IlRWLVkiLCJSZWxlYXNlZCI6IjI0IEp1bCAyMDA3IiwiUnVudGltZSI6IjExIG1pbiIsIkdlbnJlIjoiQW5pbWF0aW9uLCBBZHZlbnR1cmUsIENvbWVkeSwgRHJhbWEsIEZhbWlseSwgRmFudGFzeSIsIkRpcmVjdG9yIjoiTi9BIiwiV3JpdGVyIjoiQnJpdHQgQWxsY3JvZnQsIFBoaWxpcCBELiBGZWhybGUsIFJvc3MgSGFzdGluZ3MsIEhvbGx5IEh1Y2tpbnMsIERhdmlkIFBpdGxpaywgQ2hhcmxlcyBIb2RnZXMsIERhbiBXaWNrc21hbiIsIkFjdG9ycyI6Ik1pY2hhZWwgQW5nZWxpcywgS2VpdGggV2lja2hhbSwgTWljaGFlbCBCcmFuZG9uLCBLZXJyeSBTaGFsZSIsIlBsb3QiOiJUaGlzIHNlcmllcyBmb2xsb3dzIHRoZSBhZHZlbnR1cmVzIG9mIFRob21hcyB0aGUgVGFuayBFbmdpbmUgYW5kIGFsbCBvZiBoaXMgZW5naW5lIGZyaWVuZHMgb24gdGhlIElzbGFuZCBvZiBTb2Rvci4iLCJMYW5ndWFnZSI6IlNwYW5pc2gsIEZyZW5jaCwgQ2hpbmVzZSwgSmFwYW5lc2UsIEVuZ2xpc2giLCJDb3VudHJ5IjoiVUsiLCJBd2FyZHMiOiIxIHdpbiAmIDIgbm9taW5hdGlvbnMuIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qll6UmxNak0zT0dFdFltVmlaUzAwWldFM0xUZzJNVEV0TUROak16WmpZVFF5TmpNelhrRXlYa0ZxY0dkZVFYVnlNak15T1RreU1EWUAuX1YxX1NYMzAwLmpwZyIsIlJhdGluZ3MiOlt7IlNvdXJjZSI6IkludGVybmV0IE1vdmllIERhdGFiYXNlIiwiVmFsdWUiOiI2LjYvMTAifV0sIk1ldGFzY29yZSI6Ik4vQSIsImltZGJSYXRpbmciOiI2LjYiLCJpbWRiVm90ZXMiOiIzLDY1NyIsImltZGJJRCI6InR0MDA4NjgxNSIsIlR5cGUiOiJzZXJpZXMiLCJ0b3RhbFNlYXNvbnMiOiIyNCIsIlJlc3BvbnNlIjoiVHJ1ZSJ9
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0999872
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d5ccff7b0902ff2eecb344c57adeede351610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71be900002723b8822000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a64e372723-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Thomas Kinkade''s Christmas Cottage","Year":"2008","Rated":"PG","Released":"11
+        Nov 2008","Runtime":"96 min","Genre":"Biography, Drama","Director":"Michael
+        Campus","Writer":"Ken LaZebnik","Actors":"Jared Padalecki, Marcia Gay Harden,
+        Peter O''Toole, Aaron Ashmore","Plot":"A look at the inspiration behind Thomas
+        Kinkade''s painting The Christmas Cottage, and how the artist was motivated
+        to begin his career after discovering his mother was in danger of losing their
+        family home.","Language":"English","Country":"USA, Canada","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BNTk0NjU5NjE2NV5BMl5BanBnXkFtZTcwNTY1ODIwMg@@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"6.4/10"},{"Source":"Rotten Tomatoes","Value":"60%"}],"Metascore":"N/A","imdbRating":"6.4","imdbVotes":"2,244","imdbID":"tt0999872","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"Firm
+        Films","Website":"N/A","Response":"True"}'
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0262826
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dbbae2da4cd4d85c55e30461746aec5621610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71c900000f7849d313000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a74fbcf784-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IlRob21hcyBpbiBMb3ZlIiwiWWVhciI6IjIwMDAiLCJSYXRlZCI6IlIiLCJSZWxlYXNlZCI6IjMxIEphbiAyMDAxIiwiUnVudGltZSI6Ijk3IG1pbiIsIkdlbnJlIjoiQ29tZWR5LCBEcmFtYSwgUm9tYW5jZSIsIkRpcmVjdG9yIjoiUGllcnJlLVBhdWwgUmVuZGVycyIsIldyaXRlciI6IlBoaWxpcHBlIEJsYXNiYW5kIiwiQWN0b3JzIjoiQmVub8OudCBWZXJoYWVydCwgQXlsaW4gWWF5LCBNYWdhbGkgUGluZ2xhdXQsIE1pY2hlbGluZSBIYXJkeSIsIlBsb3QiOiJUaG9tYXMgaXMgYSB5b3VuZyBhZ29yYXBob2JpYyBtYW47IGhlJ3MgYWZyYWlkIG9mIGNvbWluZyB0byBhbnkga2luZCBvZiBjb250YWN0IHdpdGggb3RoZXIgcGVvcGxlLCBzbyBoZSBsaXZlcyB0b3RhbGx5IGlzb2xhdGVkIGluIGhpcyBhcGFydG1lbnQuIFRoZSBzdG9yeSB0YWtlcyBwbGFjZSBpbiB0aGUgbmVhciBmdXR1cmUgLi4uIiwiTGFuZ3VhZ2UiOiJGcmVuY2giLCJDb3VudHJ5IjoiQmVsZ2l1bSwgRnJhbmNlIiwiQXdhcmRzIjoiMTEgd2lucyAmIDIgbm9taW5hdGlvbnMuIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk1UTXdPREUxTkRRM09WNUJNbDVCYW5CblhrRnRaVFl3TnpRd01UZzUuX1YxX1NYMzAwLmpwZyIsIlJhdGluZ3MiOlt7IlNvdXJjZSI6IkludGVybmV0IE1vdmllIERhdGFiYXNlIiwiVmFsdWUiOiI3LjEvMTAifSx7IlNvdXJjZSI6IlJvdHRlbiBUb21hdG9lcyIsIlZhbHVlIjoiNjklIn0seyJTb3VyY2UiOiJNZXRhY3JpdGljIiwiVmFsdWUiOiI2My8xMDAifV0sIk1ldGFzY29yZSI6IjYzIiwiaW1kYlJhdGluZyI6IjcuMSIsImltZGJWb3RlcyI6IjEsODIwIiwiaW1kYklEIjoidHQwMjYyODI2IiwiVHlwZSI6Im1vdmllIiwiRFZEIjoiTi9BIiwiQm94T2ZmaWNlIjoiTi9BIiwiUHJvZHVjdGlvbiI6Ik4vQSIsIldlYnNpdGUiOiJOL0EiLCJSZXNwb25zZSI6IlRydWUifQ==
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0329934
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d60a40d278ba7f7f2fd46fa5eeb9757a41610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71d0e0000276fdb024000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a819f9276f-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IlN1ZSBUaG9tYXM6IEYuQi5FeWUiLCJZZWFyIjoiMjAwMuKAkzIwMDUiLCJSYXRlZCI6IlRWLVBHIiwiUmVsZWFzZWQiOiIxMyBPY3QgMjAwMiIsIlJ1bnRpbWUiOiI2MCBtaW4iLCJHZW5yZSI6IkNyaW1lLCBEcmFtYSwgTXlzdGVyeSwgVGhyaWxsZXIiLCJEaXJlY3RvciI6Ik4vQSIsIldyaXRlciI6IkRhdmUgQWxhbiBKb2huc29uLCBHYXJ5IFIuIEpvaG5zb24iLCJBY3RvcnMiOiJEZWFubmUgQnJheSwgWWFubmljayBCaXNzb24sIFJpY2sgUGV0ZXJzLCBNYXJjIEdvbWVzIiwiUGxvdCI6IkJhc2VkIG9uIGEgdHJ1ZSBzdG9yeSwgU3VlIFRob21hczogRi5CLkV5ZSBmb2xsb3dzIHRoZSBhZHZlbnR1cmVzIG9mIFN1ZSBUaG9tYXMgYXQgdGhlIEZCSSBpbiBXYXNoaW5ndG9uLCBELkMuIFNoZSdzIG9uZSBoYXJkLWhlYWRlZCwgc29mdC1oZWFydGVkIHdvbWFuIHdob3NlIHRhbGVudCBmb3IgcmVhZGluZyBsaXBzIGhlbHBzIC4uLiIsIkxhbmd1YWdlIjoiRW5nbGlzaCwgQW1lcmljYW4gU2lnbiBMYW5ndWFnZSIsIkNvdW50cnkiOiJDYW5hZGEsIFVTQSIsIkF3YXJkcyI6IjQgd2lucyAmIDIgbm9taW5hdGlvbnMuIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk1UUXpNRFE1TVRrMk4xNUJNbDVCYW5CblhrRnRaVGN3TWpnME1ESXlOUUBALl9WMV9TWDMwMC5qcGciLCJSYXRpbmdzIjpbeyJTb3VyY2UiOiJJbnRlcm5ldCBNb3ZpZSBEYXRhYmFzZSIsIlZhbHVlIjoiNy4yLzEwIn1dLCJNZXRhc2NvcmUiOiJOL0EiLCJpbWRiUmF0aW5nIjoiNy4yIiwiaW1kYlZvdGVzIjoiMSw2OTIiLCJpbWRiSUQiOiJ0dDAzMjk5MzQiLCJUeXBlIjoic2VyaWVzIiwidG90YWxTZWFzb25zIjoiMyIsIlJlc3BvbnNlIjoiVHJ1ZSJ9
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0288263
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=def285702e01c4dd078e86bed5f7020481610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71d7c0000c7b9ac1b2000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a8cdf8c7b9-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJUaXRsZSI6IlRvbSAmIFRob21hcyIsIlllYXIiOiIyMDAyIiwiUmF0ZWQiOiJQRyIsIlJlbGVhc2VkIjoiMjQgSmFuIDIwMDIiLCJSdW50aW1lIjoiMTEwIG1pbiIsIkdlbnJlIjoiRmFtaWx5IiwiRGlyZWN0b3IiOiJFc23DqSBMYW1tZXJzIiwiV3JpdGVyIjoiRXNtw6kgTGFtbWVycyIsIkFjdG9ycyI6IkFhcm9uIFRheWxvci1Kb2huc29uLCBSeWFuIE5lbHNvbiwgU2VhbiBCZWFuLCBJbmRheSBCYSIsIlBsb3QiOiJBIHlvdW5nIGJveSBlbXBhdGggd2hvIGZlZWxzIHRoZSBwYWluIGFuZCBleHBlcmllbmNlcyBvZiBhbm90aGVyIGlzIGRpc21pc3NlZCBhcyBoYXZpbmcgYW4gaW1hZ2luYXJ5IGZyaWVuZC4gVGhlbiB0aGUgdHdvIG1lZXQgYW5kIHRoZSBhZHZlbnR1cmUgYmVnaW5zIGFzIHRoZSBkaXNjb3Zlcnkgb2YgdGhlaXIgbXV0dWFsIGhpc3RvcnkgdW5mb2xkcy4iLCJMYW5ndWFnZSI6IkVuZ2xpc2giLCJDb3VudHJ5IjoiTmV0aGVybGFuZHMsIFVLIiwiQXdhcmRzIjoiMSB3aW4uIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk1UTTRNakk1TXpnMk5GNUJNbDVCYW5CblhrRnRaVFl3TXpBME1UYzIuX1YxX1NYMzAwLmpwZyIsIlJhdGluZ3MiOlt7IlNvdXJjZSI6IkludGVybmV0IE1vdmllIERhdGFiYXNlIiwiVmFsdWUiOiI2LjcvMTAifV0sIk1ldGFzY29yZSI6Ik4vQSIsImltZGJSYXRpbmciOiI2LjciLCJpbWRiVm90ZXMiOiI5NDUiLCJpbWRiSUQiOiJ0dDAyODgyNjMiLCJUeXBlIjoibW92aWUiLCJEVkQiOiIwNiBBcHIgMjAxMCIsIkJveE9mZmljZSI6Ik4vQSIsIlByb2R1Y3Rpb24iOiJGaXJzdCBGbG9vciBGZWF0dXJlcyIsIldlYnNpdGUiOiJOL0EiLCJSZXNwb25zZSI6IlRydWUifQ==
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&i=tt0038977
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d45589528d2f87c98aa1ffc82ad8ed8891610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71de80000270bda87b000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7a97882270b-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Title":"Springtime for Thomas","Year":"1946","Rated":"Approved","Released":"30
+        Mar 1946","Runtime":"8 min","Genre":"Animation, Short, Comedy, Family, Romance","Director":"Joseph
+        Barbera, William Hanna","Writer":"N/A","Actors":"Frank Graham","Plot":"It''s
+        spring, and Tom is much more interested in the female cat next door than in
+        Jerry.","Language":"English","Country":"USA","Awards":"N/A","Poster":"https://m.media-amazon.com/images/M/MV5BZmUzYjRhNzctNzM0MS00OWY5LWJmMjQtYjdkZjhjZjM1YmU1XkEyXkFqcGdeQXVyNTc0NjY1ODk@._V1_SX300.jpg","Ratings":[{"Source":"Internet
+        Movie Database","Value":"7.8/10"}],"Metascore":"N/A","imdbRating":"7.8","imdbVotes":"853","imdbID":"tt0038977","Type":"movie","DVD":"N/A","BoxOffice":"N/A","Production":"N/A","Website":"N/A","Response":"True"}'
+  recorded_at: Fri, 15 Jan 2021 18:28:09 GMT
+recorded_with: VCR 6.0.0

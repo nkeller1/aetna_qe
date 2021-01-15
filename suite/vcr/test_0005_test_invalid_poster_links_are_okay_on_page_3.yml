@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&page=3&s=thomas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:07 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=dfe150416b9a77cea8f4651ebc24425f61610735287; expires=Sun, 14-Feb-21
+        18:28:07 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:07 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:07 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e716310000c7c103ad1000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a79d1883c7c1-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        eyJTZWFyY2giOlt7IlRpdGxlIjoiVGhvbWFzICYgRnJpZW5kczogSGVybyBvZiB0aGUgUmFpbHMiLCJZZWFyIjoiMjAwOSIsImltZGJJRCI6InR0MTQ3NDkxOCIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJNVEV5TkRFeU9UTTVOekJlUVRKZVFXcHdaMTVCYldVNE1EWXlOemd3TURjeC5fVjFfU1gzMDAuanBnIn0seyJUaXRsZSI6IlRob21hcyAmIEZyaWVuZHM6IEtpbmcgb2YgdGhlIFJhaWx3YXkiLCJZZWFyIjoiMjAxMyIsImltZGJJRCI6InR0MjY0MTY3OCIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJaRGRtT1RFNE56UXRZbUUwTXkwMFpXSXlMVGxtWkRndE0yVTBNalprTkdabFlqZzNYa0V5WGtGcWNHZGVRWFZ5TnpNek1qVTVORFlALl9WMV9TWDMwMC5qcGcifSx7IlRpdGxlIjoiVGhvbWFzIiwiWWVhciI6IjIwMDgiLCJpbWRiSUQiOiJ0dDEyODY2NTAiLCJUeXBlIjoibW92aWUiLCJQb3N0ZXIiOiJodHRwczovL20ubWVkaWEtYW1hem9uLmNvbS9pbWFnZXMvTS9NVjVCWkRoaVpqVmxOamN0TXpRMU15MDBNMlF6TFRrek5qVXRZVGswTlRkak56TXlabVpqWGtFeVhrRnFjR2RlUVhWeU1qTXpNREkxT0RJQC5fVjFfU1gzMDAuanBnIn0seyJUaXRsZSI6IlNlbmt2ZWxkIG1lZCBUaG9tYXMgb2cgSGFyYWxkIiwiWWVhciI6IjIwMDPigJMiLCJpbWRiSUQiOiJ0dDAzODA5NTEiLCJUeXBlIjoic2VyaWVzIiwiUG9zdGVyIjoiTi9BIn0seyJUaXRsZSI6IlRob21hcyBhbmQgRnJpZW5kczogVGhlIEdyZWF0IFJhY2UiLCJZZWFyIjoiMjAxNiIsImltZGJJRCI6InR0NTU2MzkzMiIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJNamMyWm1Wak1qWXRZbUV4WWkwME5UYzBMV0ZpWm1ZdFlqZ3hOalppWWprMk5UbGhYa0V5WGtGcWNHZGVRWFZ5Tmpjd05UUXpNemdALl9WMV9TWDMwMC5qcGcifSx7IlRpdGxlIjoiVGhvbWFzICYgRnJpZW5kczogQmlnIFdvcmxkISBCaWcgQWR2ZW50dXJlcyEgVGhlIE1vdmllIiwiWWVhciI6IjIwMTgiLCJpbWRiSUQiOiJ0dDc0MTU0NjYiLCJUeXBlIjoibW92aWUiLCJQb3N0ZXIiOiJodHRwczovL20ubWVkaWEtYW1hem9uLmNvbS9pbWFnZXMvTS9NVjVCWlRVd1lXRTBOekl0TnprNVppMDBZekl5TFRoaE5tVXRObVEwWWpZelptRTJNR1EwWGtFeVhrRnFjR2RlUVhWeU5EZzROalk1T1RRQC5fVjFfU1gzMDAuanBnIn0seyJUaXRsZSI6IlRob21hcyAmIEZyaWVuZHM6IEJsdWUgTW91bnRhaW4gTXlzdGVyeSIsIlllYXIiOiIyMDEyIiwiaW1kYklEIjoidHQyMjEzMzQ2IiwiVHlwZSI6Im1vdmllIiwiUG9zdGVyIjoiaHR0cHM6Ly9tLm1lZGlhLWFtYXpvbi5jb20vaW1hZ2VzL00vTVY1Qk9USTBNalF4TkRnMk1sNUJNbDVCYW5CblhrRnRaVGd3TnpZeU5UQXhNekVALl9WMV9TWDMwMC5qcGcifSx7IlRpdGxlIjoiVGhvbWFzICYgRnJpZW5kczogVGFsZSBvZiB0aGUgQnJhdmUiLCJZZWFyIjoiMjAxNCIsImltZGJJRCI6InR0MzI4MjE3NCIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJNVGN6TWpZMU1qWXdOVjVCTWw1QmFuQm5Ya0Z0WlRnd05UY3hNREEzTWpFQC5fVjFfU1gzMDAuanBnIn0seyJUaXRsZSI6IlRob21hcyB0aGUgSW1wb3N0b3IiLCJZZWFyIjoiMTk2NSIsImltZGJJRCI6InR0MDA1ODY1MCIsIlR5cGUiOiJtb3ZpZSIsIlBvc3RlciI6Imh0dHBzOi8vbS5tZWRpYS1hbWF6b24uY29tL2ltYWdlcy9NL01WNUJZV1kzWVRNek5XWXRaVEk0TnkwME1XVm1MV0k0TmpndFpXRXpZalptTlRBM1pqQXlYa0V5WGtGcWNHZGVRWFZ5TWpreE9ESTNNVFlALl9WMV9TWDMwMC5qcGcifSx7IlRpdGxlIjoiVGhvbWFzICYgRnJpZW5kczogRGF5IG9mIHRoZSBEaWVzZWxzIiwiWWVhciI6IjIwMTEiLCJpbWRiSUQiOiJ0dDIwNTA2NjQiLCJUeXBlIjoibW92aWUiLCJQb3N0ZXIiOiJodHRwczovL20ubWVkaWEtYW1hem9uLmNvbS9pbWFnZXMvTS9NVjVCTVRrNE5UQTVPRFUzT0Y1Qk1sNUJhbkJuWGtGdFpUZ3dNakF5TmpBMk1ERUAuX1YxX1NYMzAwLmpwZyJ9XSwidG90YWxSZXN1bHRzIjoiNjkwIiwiUmVzcG9uc2UiOiJUcnVlIn0=
+  recorded_at: Fri, 15 Jan 2021 18:28:07 GMT
+recorded_with: VCR 6.0.0

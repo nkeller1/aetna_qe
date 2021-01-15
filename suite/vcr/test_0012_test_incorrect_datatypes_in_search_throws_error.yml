@@ -1,0 +1,60 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&s=12.34
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '47'
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=da2bdc9f05fdd5215352e5c50551488231610735285; expires=Sun, 14-Feb-21
+        18:28:05 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:05 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:05 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Accept-Ranges:
+      - bytes
+      Cf-Request-Id:
+      - 07a8e70ce70000c7b5888f6000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a78e3805c7b5-DEN
+    body:
+      encoding: UTF-8
+      string: '{"Response":"False","Error":"Movie not found!"}'
+  recorded_at: Fri, 15 Jan 2021 18:28:05 GMT
+recorded_with: VCR 6.0.0

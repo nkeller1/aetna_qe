@@ -1,0 +1,59 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://www.omdbapi.com/?apikey=b8601c90&page=0.34&s=thomas
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - Faraday v1.2.0
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Fri, 15 Jan 2021 18:28:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Transfer-Encoding:
+      - chunked
+      Connection:
+      - keep-alive
+      Set-Cookie:
+      - __cfduid=d74b40ddd838cbf9a9dbb566c838c4d881610735289; expires=Sun, 14-Feb-21
+        18:28:09 GMT; path=/; domain=.omdbapi.com; HttpOnly; SameSite=Lax
+      Cache-Control:
+      - public, max-age=86400
+      Expires:
+      - Fri, 15 Jan 2021 19:28:09 GMT
+      Last-Modified:
+      - Fri, 15 Jan 2021 18:28:09 GMT
+      Vary:
+      - "*, Accept-Encoding"
+      X-Aspnet-Version:
+      - 4.0.30319
+      X-Powered-By:
+      - ASP.NET
+      Access-Control-Allow-Origin:
+      - "*"
+      Cf-Cache-Status:
+      - MISS
+      Cf-Request-Id:
+      - 07a8e71e630000c7d521a2c000000001
+      Server:
+      - cloudflare
+      Cf-Ray:
+      - 6121a7aa3f56c7d5-DEN
+    body:
+      encoding: ASCII-8BIT
+      string: '{"Response":"False","Error":"The offset specified in a OFFSET clause
+        may not be negative."}'
+  recorded_at: Fri, 15 Jan 2021 18:28:10 GMT
+recorded_with: VCR 6.0.0
