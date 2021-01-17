@@ -43,6 +43,13 @@ class ApiTest < Minitest::Test
       # "-" but if the "-" (example: -1985) comes before the year this test will fail since that is making
       # the year a negative value instead of a type-o
       assert_equal Date.new(result['Year'].to_i).gregorian?, true
+      # this test fails becuase there is a year that does is 1984-, would suggest this be fixded
+      # assert_equal result['Year'].length, 4
+      # also add a test to make sure they are actually numbers, no letters. again this fails b/c of bad data
+      # def is_numeric?(numeric_id)
+      #   numeric_id.match(/\A[+-]?\d+?(\.\d+)?\Z/) == nil ? false : true
+      # end
+      # assert_equal is_numeric?result['Year'], true
     end
   end
 
